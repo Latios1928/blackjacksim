@@ -9,6 +9,7 @@ import java.util.Collections;
 public class DeckofCards {
     private Card[] deck;
 
+    //constructs a deck of cards
     public DeckofCards() {
         this.deck = new Card[52];
         int count = 0;
@@ -20,35 +21,25 @@ public class DeckofCards {
         }
     }
 
-    public void returnDeck(){
-        System.out.println(deck);
-    }
-
-    public void f(){
+    //prints the current order of cards in the deck
+    public String toString(){
         String s = Arrays.toString(this.deck);
-        System.out.println(s);
+        return s;
     }
 
-    /*public int setIndex(){
-        int index = (int) (52.0 * Math.random());
-        return index;
-    }*/
-
+    //shuffles the deck
     public void shuffleDeck(){
 
         List<Card> m = Arrays.asList(this.deck);
         ArrayList<Card> m1 = new ArrayList<Card>(m);
-        System.out.println(m1);
         for(int i = 0;i<1000;i++){
             int y = (int)(52.0*Math.random());
             Card x = this.deck[y];
-            System.out.println(x);
             m1.remove(y);
             m1.add(50,x);
-            System.out.println(m1);
         }
-
-
+        Card[] array = m1.toArray(new Card[52]);
+        this.deck = array;
     }
 
 }

@@ -21,6 +21,10 @@ public class DeckofCards {
         }
     }
 
+    public Card[] getDeck(){
+        return this.deck;
+    }
+
     //prints the current order of cards in the deck
     public String toString(){
         String s = Arrays.toString(this.deck);

@@ -7,9 +7,11 @@ public class BlackjackGame {
         Dealer dealer = new Dealer();
         Player player = new Player(100000);
         DeckofCards deck = new DeckofCards();
+        System.out.println(deck.toString());
     }
 
     public void deal(){
+        //Card[] dealdeck = deck.getDeck();
 
     }
 

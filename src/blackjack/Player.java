@@ -5,7 +5,7 @@ import java.util.List;
 import java.lang.Math;
 
 public class Player {
-    private ArrayList phand;
+    private ArrayList<Card> phand;
     private double score;
     private double pcardsum;
 
